@@ -1,0 +1,12 @@
+{ 
+    "mod": "rfid",
+    "area_code": 0,
+    "chan_code": 0,
+    "power": 2600,
+    "rfid": 
+    {
+        "id": 65535,	
+        "stat": 0, 
+        "power": 2600 
+    }
+}

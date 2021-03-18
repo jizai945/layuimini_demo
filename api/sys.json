@@ -1,0 +1,36 @@
+{
+    "mod" : "thread", 
+    "thread":
+    [
+         {
+             "name":"ElvMsgPr",
+             "pri":10,
+             "stat":0,
+             "sp":144,
+             "stack_size":2048,
+             "max_used":8,
+             "left_tick":20,
+             "err":0
+         },
+         {
+             "name":"main",
+             "pri":10,
+             "stat":2,
+             "sp":144,
+             "stack_size":2048,
+             "max_used":8,
+             "left_tick":20,
+             "err":0
+         },
+		 {
+		     "name":"app",
+		     "pri":10,
+		     "stat":2,
+		     "sp":144,
+		     "stack_size":2048,
+		     "max_used":8,
+		     "left_tick":20,
+		     "err":-3
+		 }
+  	]
+}

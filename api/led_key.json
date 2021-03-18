@@ -1,0 +1,19 @@
+{ 
+    "mod": "light", 
+    "stat_list":
+    [
+        {"id":1, "stat": 0},
+        {"id":2, "stat": 1},
+        {"id":3, "stat": 1},
+        {"id":4, "stat": 1},
+        {"id":5, "stat": 1},
+        {"id":6, "stat": 1},
+        {"id":7, "stat": 1},
+        {"id":8, "stat": 1},
+        {"id":9, "stat": 1},
+        {"id":10, "stat": 1},
+        {"id":11, "stat": 1},
+        {"id":12, "stat": 1},
+        {"id":13, "stat": 1}
+    ]
+}

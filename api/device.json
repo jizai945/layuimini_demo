@@ -1,0 +1,13 @@
+{ 
+    "mod": "system", 
+    "elv_ids" : "elv_id",	
+    "mem_used": 59396, 
+    "mem_total": 134552, 
+    "mem_max_used": 63608,
+    "rtt_ver": "3.1.4", 
+    "app_ver": "16.243.239", 
+    "bl_ver": "16.243.239", 
+    "fs_used": 0,
+    "fs_total": 6791168, 
+    "sys_time": "2021-03-13 12:00:36" 
+}

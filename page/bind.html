@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>楼层绑定</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+	<style>
+		.layui-card {border:1px solid #f2f2f2;border-radius:5px;}
+        .floor-module {width:100%;height:300px;margin-top: 20px;}
+        .door-module {width:100%;height:200px;margin-top: 20px;}
+        .text-key{text-align:center;}
+        .text-value{text-align:left;}
+        .blank{height: 50px;}
+        .center{margin-left: 40%;}
+
+	</style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">	
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md12">
+                        <div class="layui-card floor-module">
+                            <div class="layui-card-header">楼层绑定</div>
+                            <button id='fresh_btn' class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" >自动刷新状态(1s)</button>
+                            <button id="update_btn" class="layui-btn layui-btn-normal layui-btn-sm data-add-btn">立即刷新</button>
+                            <div class="layui-card-body">      
+                                <form class="layui-form" action="">                   
+                                    <div class="layui-row layui-col-space10">
+                                        <!-- 第一行 -->
+                                        <div class="layui-col-xs4">
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label">楼层ID:</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" name="floorid" lay-verify="floorid" autocomplete="off" placeholder="输入框(必填项)" class="layui-input">
+                                                </div>
+                                            </div>
+                                        </div>		
+                                        <div class="layui-col-xs2"></div>	
+                                        <div class="layui-col-xs6">
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label">楼层标签:</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" name="floortag" lay-verify="floortag" autocomplete="off" placeholder="输入框(必填项)" class="layui-input">
+                                                </div>
+                                            </div>
+                                        </div>	
+                                        <!-- 第二行 -->
+                                        <div class="layui-col-xs3">
+                                            <div class="text-key">
+                                                <font size="3" >RFID标签检测状态:</font>    
+                                            </div>                                       
+                                        </div>	
+                                        <div class="layui-col-xs3">
+                                            <div class="text-value">
+                                                <font size="3" id='rfid_stat' color="blue">loading...</font>    
+                                            </div>                                       
+                                        </div>	
+                                        <div class="layui-col-xs3">    
+                                            <div class="text-key">
+                                                <font size="3" >当前按键状态:</font>    
+                                            </div>                                                   
+                                        </div>	
+                                        <div class="layui-col-xs3">
+                                            <div class="text">
+                                                <font size="3" id='key_stat' color="blue">loading...</font>    
+                                            </div>                                       
+                                        </div>
+                                        <!-- 第三行空白 -->
+                                        <div class="layui-col-xs12">
+                                            <div class = "blank"></div>
+                                        </div>
+                                        <!-- 第四行 -->
+                                        <!-- <div class="layui-col-xs4"></div> -->
+                                        <div class="layui-col-xs12">
+                                            <div class="layui-form-item center">
+                                                <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="submit">提交</button>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="layui-col-xs6"></div> -->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="layui-card door-module">
+                            <div class="layui-card-header">电梯门绑定</div>
+                            <button id='door_fresh_btn' class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" >自动刷新状态(1s)</button>
+                            <button id="door_update_btn" class="layui-btn layui-btn-normal layui-btn-sm data-add-btn">立即刷新</button>
+                            <form class="layui-form" action="">
+                                <div class="layui-card-body">    
+                                    <div class="layui-form-item">
+                                        <div class="layui-col-xs4">
+                                            <label class="layui-form-label">门1状态</label>
+                                            <div class="layui-input-block">
+                                                <input type="checkbox" name="door1" lay-skin="switch" lay-filter="switchTest" lay-text="1|0" disabled>
+                                            </div>	
+                                        </div> 
+                                        <div class="layui-col-xs4">
+                                            <label class="layui-form-label">门2状态</label>
+                                            <div class="layui-input-block">
+                                                <input type="checkbox" name="door2" lay-skin="switch" lay-filter="switchTest" lay-text="1|0" disabled>
+                                            </div>	
+                                        </div>                               	
+                                    </div>	
+                                </div>	  
+                            </form>
+                            <div class="layui-col-xs4 center">
+                                <button id="door_submit" class="layui-btn layui-btn-normal layui-btn-sm data-add-btn">开门绑定</button>
+                            </div> 
+                        </div>
+                    </div>		
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/user/bind.js" charset="utf-8"></script>
+</body>
+</html>

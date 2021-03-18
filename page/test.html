@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设备调试</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/public.css" media="all">
+	<style>
+		.layui-card {border:1px solid #f2f2f2;border-radius:5px;}
+
+		.test-module {width:100%;height:100px;}
+		.panel {background-color:#fff;border:1px solid transparent;border-radius:3px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+		.panel-body {padding:10px}
+		.panel-title {margin-top:0;margin-bottom:0;font-size:12px;color:inherit}
+		.panel-content {Margin:10px}
+		.label {display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em;margin-top: .3em;}
+	</style>
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">	
+		<form class="layui-form" action="">
+			<div class="layui-form-item">
+				<label class="layui-form-label">测试开关</label>
+				<div class="layui-input-block">
+				  <input type="checkbox" name="close" lay-skin="switch" lay-filter="switchTest" lay-text="ON|OFF"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+				</div>		
+			</div>		  
+		</form>
+		<form class="layui-form" action="">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md12">
+					<div class="layui-row layui-col-space15">
+						<div class="layui-col-md12">
+							<div class="layui-card">
+								<div class="layui-card-header"><i class="fa fa-warning icon"></i>测试信息(开始测试后3s更新一次)</div>
+								<div class="layui-card-body">
+									<div class="test-module">
+										<div class="layui-row layui-col-space10">
+											<div class="layui-col-xs4">
+												<div class="panel layui-bg-blue">
+													<div class="panel-body">
+														<div class="panel-title">
+															<h5>状态</h5>
+														</div>
+														<div class="panel-content">
+															<h1 class="no-margins" id='test_stat'></h1>
+														</div>
+													</div>
+												</div>
+											</div>										
+											<div class="layui-col-xs4">
+												<div class="panel layui-bg-red">
+													<div class="panel-body">
+														<div class="panel-title">
+															<h5 >错误代码</h5>
+														</div>
+														<div class="panel-content">
+															<h1 class="no-margins" id='test_err'></h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="layui-col-xs4">
+												<div class="panel layui-bg-orange">
+													<div class="panel-body">
+														<div class="panel-title">
+															<!-- <span class="label pull-right layui-bg-cyan">实时</span> -->
+															<!-- <h5 class="fa fa-apple" >APP版本</h5> -->
+															<h5 >错误楼层</h5>
+														</div>
+														<div class="panel-content">
+															<h1 class="no-margins" id='test_err_flower'></h1>
+														</div>
+													</div>
+												</div>
+											</div>																	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>										
+					</div>
+				</div>	
+			</div>			  
+		</form>
+    </div>
+</div>
+
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/user/test.js" charset="utf-8"></script>
+</body>
+</html>

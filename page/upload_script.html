@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUDU FILE UPLOAD SERVER</title>
+    <link rel="shortcut  icon" href="#" type="image/x-icon" />
+    <style>
+        .main {
+            /text-align: center;
+            position: absolute;
+            left: 35%;
+            top: 30%;
+            /* transform: translate(-50%, -50%); */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <td>
+            <table border="0">
+				<h1>PUDU FILE UPLOAD SERVER</h1>
+                <tr>
+                    <td>
+                        <label for="newfile">Upload some file</label>
+                    </td>					
+                    <td colspan="2">
+                        <input type="file" id="multifile" multiple size="80" oninput="showFileName(event)"></input>
+                    </td>
+                </tr>
+				
+				<tr>
+				    <td>
+				        <label for="newfile">Upload dir</label>
+				    </td>					
+				    <td colspan="2">
+				        <input type='file' id='filedir' name="file" webkitdirectory oninput="showDirFile(event)" ></input>
+				    </td>
+				</tr>
+				
+                <tr>
+                    <td>
+                        <label for="url">Set Dir on server</label>
+                    </td>
+                    <td>
+                        <select id="url">
+							<option value ="/">/</option>
+                            <option value ="/flash/">/flash/</option>
+                            <option value ="/index/">/index/</option>
+                            <option value ="/inde/src/">/inde/src/</option>
+                            <option value ="/file/">/file/</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="filepath">Set path on server</label>
+                    </td>
+                    <td>
+                        <button id="upload" type="button" onclick="upload()">Upload</button>
+                    </td>
+                </tr>
+				
+				<tr>
+					<table width="500" border="1" cellspacing="0">
+					  <thead> 
+					   <tr> 
+						 <th>id</th> 
+						 <th>文件名</th> 
+						 <th>大小</th> 
+						 <th>状态</th> 
+					   </tr>  
+					  </thead> 
+					  <tbody id="tbMain"></tbody> 
+					</table>
+				</tr>
+				
+            </table>
+            
+        </td>
+    </div>
+	
+</body>
+<script src="../js/user/upload_script.js" charset="utf-8"></script>
+</html>
