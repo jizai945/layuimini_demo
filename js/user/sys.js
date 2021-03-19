@@ -7,8 +7,8 @@ var thread_status = ['close', 'init', 'ready', 'suspend'];
 
         table.render({
             elem: '#currentTableId',
-            // url: '../api/sys.json',	// 数据接口
-			url: '/get?mod=thread&param=all',	// 数据接口
+            url: '../api/sys.json',	// 数据接口
+			// url: '/get?mod=thread&param=all',	// 数据接口
             toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',

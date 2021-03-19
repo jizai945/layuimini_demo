@@ -6,8 +6,8 @@ layui.use(['layer', 'echarts'], function () {
 
     // miniTab.listen();
 
-    var ajax_url = 'http://192.168.2.1/get?mod=system&p=mem_stat&p=rtt_ver&p=app_ver&p=bl_ver&p=fs_stat&p=sys_time&p=elv_ids';
-    // var ajax_url = '../api/device.json';
+    // var ajax_url = 'http://192.168.2.1/get?mod=system&p=mem_stat&p=rtt_ver&p=app_ver&p=bl_ver&p=fs_stat&p=sys_time&p=elv_ids';
+    var ajax_url = '../api/device.json';
     // ------------------------------ RAM图表 -----------------------------------------
     var chartDom = document.getElementById('echarts1');
     var myChart1 = echarts.init(chartDom);

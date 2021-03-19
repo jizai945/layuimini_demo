@@ -4,10 +4,10 @@ layui.use(['form', 'table'], function () {
         table = layui.table;
 
     // 调试切换url
-    var log_list_url = 'http://192.168.2.1/get?mod=log_list';
-    var log_size_url = 'http://192.168.2.1/get?mod=log_list&parm=num';
-    // var log_list_url = '../api/log.json';
-    // var log_size_url = '../api/log_size.json'
+    // var log_list_url = 'http://192.168.2.1/get?mod=log_list';
+    // var log_size_url = 'http://192.168.2.1/get?mod=log_list&parm=num';
+    var log_list_url = '../api/log.json';
+    var log_size_url = '../api/log_size.json'
     var log_del_url = 'http://192.168.2.1/set?mod=del_log';
     var log_dow_url = 'http://192.168.2.1/log/';
     // 变量记录日志的条数

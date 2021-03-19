@@ -4,8 +4,8 @@ layui.use(['form', 'table'], function () {
         table = layui.table;
 
     var test_start_url = 'http://192.168.2.1/cmd?mod=test_stat';
-    var test_result_url = 'http://192.168.2.1/cmd?mod=test_stat';
-    // var test_result_url = '../api/test.json';
+    // var test_result_url = 'http://192.168.2.1/cmd?mod=test_stat';
+    var test_result_url = '../api/test.json';
     var start_test_timer; // 定时器
     var ledkey_fresh_timer = null; // 定时器
     var test_stat = ['空闲', '正在执行测试', '上次测试已完成'];

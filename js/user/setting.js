@@ -3,12 +3,12 @@ layui.use(['table'], function () {
         table = layui.table;
         
     // 调试切换
-    var wifi_table_url = 'http://192.168.2.1/get?mod=wifi&p=all';	// 实际使用的接口
-    var lora_table_url = 'http://192.168.2.1/get?mod=lora&param=channel';
-    var rfid_table_url = 'http://192.168.2.1/get_cfg?mod=rfid&param=all';
-    // var wifi_table_url = '../api/wifi.json';	// 测试的接口
-    // var lora_table_url = '../api/lora.json';
-    // var rfid_table_url = '../api/rfid.json';
+    // var wifi_table_url = 'http://192.168.2.1/get?mod=wifi&p=all';	// 实际使用的接口
+    // var lora_table_url = 'http://192.168.2.1/get?mod=lora&param=channel';
+    // var rfid_table_url = 'http://192.168.2.1/get_cfg?mod=rfid&param=all';
+    var wifi_table_url = '../api/wifi.json';	// 测试的接口
+    var lora_table_url = '../api/lora.json';
+    var rfid_table_url = '../api/rfid.json';
     var wifi_save_url = 'http://192.168.2.1/set?mod=wifi';
     var lora_save_url = 'http://192.168.2.1/set?mod=lora';
     var rfid_save_url = 'http://192.168.2.1/set?mod=rfid';

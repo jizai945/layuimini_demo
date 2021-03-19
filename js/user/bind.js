@@ -3,12 +3,12 @@ layui.use(['form'], function () {
     form = layui.form
     , layer = layui.layer;
 
-    var rfid_url = 'http://192.168.2.1/get/mod=rfid&param=detected_rfid';
-    var key_url = 'http://192.168.2.1/get/mod=light&param=pressed';
-    var door_url = ' http://192.168.2.1/get_cfg?mod=sensor&param=metal'
-    // var rfid_url = '../api/detected_rfid.json';
-    // var key_url = '../api/pressed.json';
-    // var door_url = '../api/door.json';
+    // var rfid_url = 'http://192.168.2.1/get/mod=rfid&param=detected_rfid';
+    // var key_url = 'http://192.168.2.1/get/mod=light&param=pressed';
+    // var door_url = ' http://192.168.2.1/get_cfg?mod=sensor&param=metal'
+    var rfid_url = '../api/detected_rfid.json';
+    var key_url = '../api/pressed.json';
+    var door_url = '../api/door.json';
     var submit_url = 'http://192.168.2.1/post/mod=bind_rfid';
     var submit_door_url = 'http://192.168.2.1/set?mod=bind_door';
     var rfid_obj = new Object();

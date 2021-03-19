@@ -3,8 +3,8 @@ layui.use(['echarts', 'form'], function () {
         form = layui.form;	
         echarts = layui.echarts;
 
-    var senser_req_url = 'http://192.168.2.1/get?mod=sensor&param=all';
-    // var senser_req_url = '../api/senser.json';
+    // var senser_req_url = 'http://192.168.2.1/get?mod=sensor&param=all';
+    var senser_req_url = '../api/senser.json';
     
     //  -------------------------------- 陀螺仪 ------------------------------------------------
     var echartGyro = echarts.init(document.getElementById('gyroChart'), 'walden');
