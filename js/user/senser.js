@@ -172,5 +172,11 @@ layui.use(['echarts', 'form'], function () {
         
     }, 3000);
     
-    
+        // echarts 窗口缩放自适应
+    window.onresize = function(){
+        echartGyro.resize();
+        echartAccel.resize();
+        ecartBaroceptor.resize();
+    }
+
 });

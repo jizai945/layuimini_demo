@@ -131,6 +131,12 @@ layui.use(['layer', 'echarts'], function () {
         httpRequest.send();
     }
     
-    ajax_req_device();		
+    ajax_req_device();	
+    
+    // echarts 窗口缩放自适应
+    window.onresize = function(){
+        myChart1.resize();
+        myChart2.resize();
+    }
     
 });
