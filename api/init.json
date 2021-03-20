@@ -1,78 +1,84 @@
 {
-  "homeInfo": {
-    "title": "首页",
-    "href": "page/welcome-1.html"
-  },
-  "logoInfo": {
-    "title": "PUDU",
-    "image": "images/logo.png",
-    "href": ""
-  },
-  "menuInfo": [
-    {
-      "title": "PUDU",
-      "icon": "layui-icon layui-icon-form",
-      "href": "",
-      "target": "_self",
-      "child": [
-        
-        {
-          "title": "系统信息",
-          "href": "page/sys.html",
-          "icon": "layui-icon layui-icon-list",
-          "target": "_self"
-        },
-        {
-          "title": "无线模块参数配置",
-          "href": "page/setting.html",
-          "icon": "layui-icon layui-icon-set-fill",
-          "target": "_self"
-        },
-		{
-		  "title": "传感器数据",
-		  "href": "page/senser.html",
-		  "icon": "layui-icon layui-icon-chart",
-		  "target": "_self"
-		},
-		{
-		  "title": "日志管理",
-		  "href": "page/log.html",
-		  "icon": "layui-icon layui-icon-log",
-		  "target": "_self"
-		},
-		{
-			"title": "信息绑定",
-			"href": "page/bind.html",
-			"icon": "layui-icon layui-icon-templeate-1",
+	"homeInfo": {
+	  "title": "首页",
+	  "href": "page/welcome-1.html"
+	},
+	"logoInfo": {
+	  "title": "PUDU",
+	  "image": "images/logo.png",
+	  "href": ""
+	},
+	"menuInfo": [
+	  {
+		"title": "PUDU",
+		"icon": "layui-icon layui-icon-form",
+		"href": "",
+		"target": "_self",
+		"child": [
+		  
+		  {
+			"title": "系统信息",
+			"href": "page/sys.html",
+			"icon": "layui-icon layui-icon-list",
 			"target": "_self"
-		},
-		{
-		  "title": "设备调试",
-		  "href": "page/test.html",
-		  "icon": "layui-icon layui-icon-util",
-		  "target": "_self"
-		},
-		{
-		  "title": "文件上传",
-		  "href": "page/upload_script.html",
-		  "icon": "layui-icon layui-icon-upload-drag",
-		  "target": "_self"
-		},
-		{
-		  "title": "固件更新",
-		  "href": "page/update.html",
-		  "icon": "layui-icon layui-icon-loading",
-		  "target": "_self"
-		},
-		{
-		  "title": "关于",
-		  "href": "page/about.html",
-		  "icon": "layui-icon layui-icon-praise",
-		  "target": "_self"
-		}
-
-      ]
-    }
-
-  ]
-}
+		  },
+		  {
+			"title": "无线模块参数配置",
+			"href": "page/setting.html",
+			"icon": "layui-icon layui-icon-set-fill",
+			"target": "_self"
+		  },
+		  {
+			"title": "传感器数据",
+			"href": "page/senser.html",
+			"icon": "layui-icon layui-icon-chart",
+			"target": "_self"
+		  },
+		  {
+			"title": "日志管理",
+			"href": "page/log.html",
+			"icon": "layui-icon layui-icon-log",
+			"target": "_self"
+		  },
+		  {
+			  "title": "机器人呼梯信息",
+			  "href": "page/robot.html",
+			  "icon": "layui-icon layui-icon-layouts",
+			  "target": "_self"
+			},
+		  {
+			  "title": "信息绑定",
+			  "href": "page/bind.html",
+			  "icon": "layui-icon layui-icon-templeate-1",
+			  "target": "_self"
+		  },
+		  {
+			"title": "设备调试",
+			"href": "page/test.html",
+			"icon": "layui-icon layui-icon-util",
+			"target": "_self"
+		  },
+		  {
+			"title": "文件上传",
+			"href": "page/upload_script.html",
+			"icon": "layui-icon layui-icon-upload-drag",
+			"target": "_self"
+		  },
+		  {
+			"title": "固件更新",
+			"href": "page/update.html",
+			"icon": "layui-icon layui-icon-loading",
+			"target": "_self"
+		  },
+		  {
+			"title": "关于",
+			"href": "page/about.html",
+			"icon": "layui-icon layui-icon-praise",
+			"target": "_self"
+		  }
+  
+		]
+	  }
+  
+	]
+  }

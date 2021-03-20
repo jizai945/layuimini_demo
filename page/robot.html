@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layui树形表格3.x演示</title>
+    <link rel="stylesheet" href="../lib/layui-v2.5.5/css/layui.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .demo-side {
+            position: relative;
+            transition: all .3s;
+        }
+
+        .demo-side.show {
+            padding-left: 120px;
+            position: relative;
+        }
+
+        .demo-side:before {
+            content: "假设这是侧边栏, treeTable使用了与layui数据表格完全不同的列宽分配方式, 由浏览器来分配, 所以当容器宽度变化后会自动适应, 对单页面系统非常友好";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -90px;
+            width: 105px;
+            visibility: hidden;
+            line-height: 1.5;
+        }
+
+        .demo-side.show:before {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="layui-hide">
+<div class="page-wrapper">
+    <div class="layui-btn-container" style="display: inline-block;">
+        <button id="btnAutoRefresh" class="layui-btn layui-btn-sm layui-btn-normal">
+            <i class="layui-icon">&#xe669;</i>自动刷新(1S)
+        </button>
+    </div>
+    <div class="layui-btn-container" style="display: inline-block;">
+        <button id="btnRefresh" class="layui-btn layui-btn-sm layui-btn-normal">
+            <i class="layui-icon">&#xe669;</i>刷新
+        </button>
+    </div>
+    <div class="layui-btn-container" style="display: inline-block;">
+        <button id="btnExpandAll" class="layui-btn layui-btn-sm layui-btn-warm">
+            <i class="layui-icon">&#xe668;</i>展开全部
+        </button>
+        <button id="btnFoldAll" class="layui-btn layui-btn-sm layui-btn-warm">
+            <i class="layui-icon">&#xe66b;</i>折叠全部
+        </button>
+    </div>
+    <div class="demo-side">
+        <table id="demoTreeTb"></table>
+    </div>
+</div>
+
+<!-- 表格操作列 -->
+<script type="text/html" id="tbBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+<script src="../lib/layui-v2.5.5/layui.js" charset="utf-8"></script>
+<script src="../js/lay-config.js?v=1.0.4" charset="utf-8"></script>
+<script src="../js/user/robot.js" charset="utf-8"></script>
+</body>
+</html>

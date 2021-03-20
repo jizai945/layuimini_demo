@@ -1,0 +1,36 @@
+{
+	"mod" : "robot_request", 
+	"robot_list":
+	[
+		{
+			"id" : 1,
+			"stat" : 0, 
+			"call_floor" : 1,
+			"target_floor" : 3
+		},
+		{
+			"id" : 2,
+			"stat" : 1, 
+			"call_floor" : 1,
+			"target_floor" : 3
+		},
+		{
+			"id" : 3,
+			"stat" : 2, 
+			"call_floor" : 1,
+			"target_floor" : 3
+		},
+		{
+			"id" : 4,
+			"stat" : 1, 
+			"call_floor" : 19,
+			"target_floor" : 30
+		},
+		{
+			"id" : 5,
+			"stat" : 1, 
+			"call_floor" : 20,
+			"target_floor" : 0
+		}
+	]
+}
